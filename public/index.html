@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Bar Chart with Pre-expanded X-Axis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .chart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding-bottom: 30px;
+        }
+        canvas {
+            margin: 20px auto;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enter Data for Combined Stacked Bar Chart</h1>
+    <form id="dataForm">
+        <label for="category">Category (e.g., A, B, C):</label><br>
+        <input type="text" id="category" required><br><br>
+
+        <label for="stack1">Stack 1 Value:</label><br>
+        <input type="number" id="stack1" required><br><br>
+
+        <label for="stack2">Stack 2 Value:</label><br>
+        <input type="number" id="stack2" required><br><br>
+
+        <label for="stack3">Stack 3 Value:</label><br>
+        <input type="number" id="stack3" required><br><br>
+
+        <label for="stack4">Stack 4 Value:</label><br>
+        <input type="number" id="stack4" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <button id="finishButton" style="display: none;">Finish and Animate Chart</button>
+
+    <div class="chart-container">
+        <canvas id="combinedChart" width="800" height="400"></canvas>
+    </div>
